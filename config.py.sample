@@ -1,0 +1,4 @@
+config = {
+    'PUSHBULLET_API_KEY': '',
+    'PUSHBULLET_IDEN_KEY': '',
+}
