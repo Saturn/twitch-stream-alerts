@@ -35,7 +35,7 @@ def save_streams(stream_list):
     try:
         with open('streams.pickle', 'r') as f:
             old = pickle.load(f)
-    except:
+    except (IOError, EOFError):
         with open('streams.pickle', 'w+') as f:
             pickle.dump([], f)
             old = []
