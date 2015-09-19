@@ -32,9 +32,13 @@ def get_stream_info(channel_list):
 def save_streams(stream_list):
     """Saves the stream info so that we don't need to send an alert
     if one has already been sent. Returns streams and new stream names"""
-
-    with open('streams.pickle', 'r') as f:
-        old = pickle.load(f)
+    try:
+        with open('streams.pickle', 'r') as f:
+            old = pickle.load(f)
+    except:
+        with open('streams.pickle', 'w+') as f:
+            pickle.dump([], f)
+            old = []
 
     updated_streams = []
     new_stream_names = [x['name'] for x in stream_list]
@@ -80,3 +84,5 @@ if __name__ == '__main__':
     for stream in streams:
         if stream['name'] in new:
             send_push(stream)
+
+
