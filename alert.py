@@ -84,5 +84,3 @@ if __name__ == '__main__':
     for stream in streams:
         if stream['name'] in new:
             send_push(stream)
-
-
