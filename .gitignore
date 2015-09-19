@@ -1,4 +1,4 @@
 *.pyc
-online.json
 streams.pickle
 config.py
+streams.txt
