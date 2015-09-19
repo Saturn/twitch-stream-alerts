@@ -33,5 +33,5 @@ https://api.pushbullet.com/v2/devices
 #### Cron
 
 A possible cron configuration:
- `*/5 * * * * cd ~/twitch_stream_alerts; /usr/bin/python alert.py >/dev/null 2>&1`
+ `*/5 * * * * cd ~/twitch_stream_alerts && /usr/bin/python alert.py >/dev/null 2>&1`
 It will check every five minutes.
