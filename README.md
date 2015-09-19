@@ -6,3 +6,8 @@ Simple script that sends Pushbullet notifications when a stream you specify come
 
 Designed to be ran via cron.
 
+#### Config
+
+
+
+#### Cron
