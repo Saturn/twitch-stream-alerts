@@ -1,5 +1,3 @@
-**Untested version**
-
 ## Twitch Stream Alerts
 
 Simple script that sends Pushbullet notifications when a stream you specify comes online.
