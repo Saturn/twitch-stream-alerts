@@ -1,6 +1,6 @@
 ## Twitch Stream Alerts
 
-Simple script that sends Pushbullet notifications when a stream you specify comes online.
+Simple script that sends Pushbullet notifications when a [Twitch.tv](http://www.twitch.tv/) stream you specify comes online.
 
 The script will keep a record of the streams it records and only alert you when a stream is 'newly online'.
 
