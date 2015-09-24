@@ -33,7 +33,7 @@ def save_streams(stream_list):
     """Saves the stream info so that we don't need to send an alert
     if one has already been sent. Returns streams and new stream names"""
     try:
-        with open('streams.pickle', 'r') as f:
+        with open('streams.pickle') as f:
             old = pickle.load(f)
     except (IOError, EOFError):
         with open('streams.pickle', 'w+') as f:
