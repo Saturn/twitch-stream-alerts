@@ -8,7 +8,7 @@ Once a stream goes offline it will still keep a record of it for a while. This i
 
 One push alert per stream.
 
-Designed to be ran via cron. Python 2 only currently.
+Designed to be ran via cron. Currently Python 2.7 only.
 #### Installation
 
 `git clone https://github.com/Saturn/twitch-stream-alerts.git`
