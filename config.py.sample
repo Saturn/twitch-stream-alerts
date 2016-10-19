@@ -1,4 +1,5 @@
 config = {
     'PUSHBULLET_API_KEY': '',
     'PUSHBULLET_IDEN_KEY': '',
+    'TWITCH_CLIENT_ID': ''
 }

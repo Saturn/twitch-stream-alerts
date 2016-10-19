@@ -14,7 +14,13 @@ Designed to be ran via cron. Currently Python 2.7 only.
 `git clone https://github.com/Saturn/twitch-stream-alerts.git`
 
 #### Config
+
+You need to have a Twitch Client ID in order to use the Twitch API. Read more here https://blog.twitch.tv/client-id-required-for-kraken-api-calls-afbb8e95f843
+
+`TWITCH_CLIENT_ID`
+
 `PUSHBULLET_API_KEY`
+
 `PUSHBULLET_IDEN_KEY` *(optional)*
 
 To obtain an API key please visit https://www.pushbullet.com/#settings/account
@@ -38,5 +44,5 @@ It will check every five minutes.
 
 #### Todo
 
-- [ ] Add some tests - Help define basic logic
-- [ ] Add support for Python 3
+- [ ] Add tests
+- [ ] Support for Python 3

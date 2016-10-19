@@ -2,6 +2,7 @@ import pickle
 from datetime import datetime
 import requests
 
+from config import config
 from push import send_push
 
 API_URL = 'https://api.twitch.tv/kraken/streams?channel='
@@ -10,7 +11,10 @@ API_URL = 'https://api.twitch.tv/kraken/streams?channel='
 def get_stream_info(channel_list):
     """Returns list of streams from channel_list that are online"""
     channel_list_string = ','.join(str(x) for x in channel_list)
-    response = requests.get(API_URL + channel_list_string)
+    CLIENT_ID = config.get('TWITCH_CLIENT_ID')
+    headers = {'Client-ID': CLIENT_ID}
+    response = requests.get(API_URL + channel_list_string,
+                            headers=headers)
     if not response.status_code == requests.codes.ok:
         return
     channels = response.json()['streams']
@@ -77,7 +81,6 @@ if __name__ == '__main__':
 
     with open('streams.txt') as f:
         channel_list = f.read().split('\n')
-
     stream_info = get_stream_info(channel_list)
     streams, new = save_streams(stream_info)
 
