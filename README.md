@@ -1,5 +1,7 @@
 ## Twitch Stream Alerts
 
+**Twitch V5 API (kraken) has been deprecated and will be shut down on December 31st 2018. The new API does not return the same amount of data so this script cannot *easily* be updated. The Twitch mobile apps now support push notifications for when streams come online so it is now unnecessary anyway.**
+
 Simple script that sends Pushbullet notifications when a [Twitch.tv](http://www.twitch.tv/) stream you specify comes online.
 
 The script will keep a record of the streams it records and only alert you when a stream is 'newly online'.
@@ -46,3 +48,4 @@ It will check every five minutes.
 
 - [ ] Add tests
 - [ ] Support for Python 3
+- [ ] Support new version of Twitch API https://dev.twitch.tv/docs/api/
