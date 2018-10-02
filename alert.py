@@ -10,7 +10,7 @@ API_URL = 'https://api.twitch.tv/kraken/streams?channel='
 
 def get_stream_info(channel_list):
     """Returns list of streams from channel_list that are online"""
-    channel_list_string = ','.join(str(x) for x in channel_list)
+    channel_list_string = ','.join(channel_list)
     CLIENT_ID = config.get('TWITCH_CLIENT_ID')
     headers = {'Client-ID': CLIENT_ID}
     response = requests.get(API_URL + channel_list_string,
@@ -80,7 +80,7 @@ def save_streams(stream_list):
 if __name__ == '__main__':
 
     with open('streams.txt') as f:
-        channel_list = f.read().split('\n')
+        channel_list = f.read().splitlines()
     stream_info = get_stream_info(channel_list)
     streams, new = save_streams(stream_info)
 
